@@ -33,7 +33,7 @@ set showmatch
 set bs=2 " allow backspacing over everything in insert mode
 set clipboard=unnamed " better clipboard
 set history=80 " bigger history
-set guifont=JetBrains_Mono:h12:cANSI:qDRAFT " change font to jetbrains mono
+set guifont=JetBrains_Mono_NL:h12:cANSI:qDRAFT " change font to jetbrains mono
 " }}}
 
 " Searching {{{
@@ -72,7 +72,6 @@ endfunction
 
 " plugins {{{
 call plug#begin("~/vimfiles/foxes")
-Plug 'morhetz/gruvbox' " Theme
 Plug 'vim-airline/vim-airline' " Airline
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " Tree view
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' } " Git integration 
@@ -84,12 +83,13 @@ Plug 'dense-analysis/ale' " linter
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Shougo/echodoc.vim'
 Plug 'puremourning/vimspector', { 'do': function('InstallWimspector')}
+Plug 'dracula/vim'
 call plug#end()
 " }}}
 
 " plugin config {{{
 " theme {{{
-colorscheme gruvbox
+colorscheme dracula
 set background=dark
 autocmd VimEnter * hi Normal ctermbg=none
 " }}}

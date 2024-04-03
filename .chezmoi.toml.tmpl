@@ -1,0 +1,7 @@
+{{ $work := promptString "Is this a work pc? (y/n)" }}
+[data]
+    work = "{{ $work }}"
+{{ if eq $work "n" }}
+    realname = "Lyze"
+    email = "11274700+lyze237@users.noreply.github.com"
+{{ end }}

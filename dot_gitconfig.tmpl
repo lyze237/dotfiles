@@ -1,0 +1,50 @@
+[alias]
+    a   = commit --amend
+    br  = branch
+    c   = commit
+    ca  = !git add -A && git commit         # Commit all changes.
+    co  = checkout
+    cp  = cherry-pick
+    d   = diff
+    dc  = diff --cached
+    f   = fetch
+    g   = log --graph --pretty=custom       # Show custom graph.
+    l   = log --pretty=custom               # Show custom log.
+    lc  = shortlog --summary --numbered     # List contributors.
+    p   = push
+    r   = rebase
+    rlc = reset --hard HEAD~1               # Remove last commit.
+    s   = status
+    ulc = reset --soft HEAD~1               # Undo last commit.
+    w   = instaweb --httpd=webrick          # Start web-based visualizer.
+
+[core]
+	editor = code --wait
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+[user]
+	name = Lyze
+	email = 11274700+lyze237@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIAR7/HN+yatJcNltTSOPUR363akBsf6QH9s/ll5pnNK
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = C:\\Users\\lyze\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
+[commit]
+	gpgsign = true
+
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code -n -w --diff \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = false
+
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code -n -w $MERGED
+
+{{ if eq .work "n" }}
+[user]
+    name = {{ .realname }}
+    email = {{ .email }}
+{{ end }}

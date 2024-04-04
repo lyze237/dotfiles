@@ -36,3 +36,6 @@ vault = "Pixile Studios"
 
 [[ssh-keys]]
 vault = "Lyze.Dev"
+
+[[ssh-keys]]
+vault = "Work"

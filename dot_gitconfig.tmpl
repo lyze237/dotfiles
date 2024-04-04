@@ -44,4 +44,7 @@
     name = {{ .realname }}
     email = {{ .email }}
     signingkey = {{ .signingkey }}
+{{ else if eq .work "y" }}
+[user]
+    signingkey = {{ .signingkey }}
 {{ end }}

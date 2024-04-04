@@ -21,14 +21,10 @@
 [core]
 	editor = code --wait
 	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
-[user]
-	name = Lyze
-	email = 11274700+lyze237@users.noreply.github.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIAR7/HN+yatJcNltTSOPUR363akBsf6QH9s/ll5pnNK
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = C:\\Users\\lyze\\AppData\\Local\\1Password\\app\\8\\op-ssh-sign.exe
+	program = {{ .chezmoi.homeDir }}/AppData/Local/1Password/app/8/op-ssh-sign.exe
 [commit]
 	gpgsign = true
 
@@ -47,4 +43,5 @@
 [user]
     name = {{ .realname }}
     email = {{ .email }}
+    signingkey = {{ .signingkey }}
 {{ end }}

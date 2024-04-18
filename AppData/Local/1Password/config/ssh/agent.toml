@@ -38,4 +38,7 @@ vault = "Pixile Studios"
 vault = "Lyze.Dev"
 
 [[ssh-keys]]
+vault = "Chirps.Cafe"
+
+[[ssh-keys]]
 vault = "Work"

@@ -6,6 +6,7 @@ README.md
 {{- if eq .chezmoi.os "windows" }}
 .config/
 .*
+.local/
 {{- else }}
 AppData/
 Documents/

@@ -16,3 +16,8 @@
 [diff]
     command = "code"
     args = ["-n", "-w", "--diff", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+
+[merge]
+    command = "bash"
+    args = ["-c", "cp {{ `{{ .Target }}` }} {{ `{{ .Target }}` }}.base && code --wait --new-window --merge {{ `{{ .Destination }}` }} {{ `{{ .Target  }}` }} {{ `{{ .Target }}` }}.base {{ `{{ .Source }}` }}"]
+

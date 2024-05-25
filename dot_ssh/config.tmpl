@@ -1,0 +1,7 @@
+Host *
+  ForwardAgent yes
+  AddKeysToAgent yes
+{{- if ne .chezmoi.os "windows" }}
+  IdentityAgent ~/.1password/agent.sock
+{{- end }}
+

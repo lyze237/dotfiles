@@ -29,6 +29,9 @@
 {{ if eq .chezmoi.os "windows" -}}
 [gpg "ssh"]
 	program = {{ .chezmoi.homeDir }}/AppData/Local/1Password/app/8/op-ssh-sign.exe
+{{ else }}
+[gpg "ssh"]
+	program = "/opt/1Password/op-ssh-sign"
 {{ end -}}
 
 [commit]

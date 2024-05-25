@@ -1,6 +1,11 @@
 LICENSE
 README.md
-{{- if ne .chezmoi.os "windows" }}
+
+
+
+{{- if eq .chezmoi.os "windows" }}
+.config/
+{{- else }}
 AppData/
 Documents/
 {{- end }}

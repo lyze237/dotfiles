@@ -1,0 +1,34 @@
+{ config, pkgs, ... }: {
+  home = {
+    username = "lyze";
+    homeDirectory = "/home/lyze";
+    stateVersion = "23.11";
+
+    sessionVariables = {
+      SSH_AUTH_SOCK = "/home/lyze/.1password/agent.sock";
+    };
+
+    packages = with pkgs; [
+      neofetch
+      htop
+      vesktop
+      thunderbird
+      ungoogled-chromium
+      blender
+      nextcloud-client
+      gimp
+    ];
+  };
+
+  imports = [
+    ./modules/bash.nix 
+    ./modules/xdg.nix 
+    ./modules/vim.nix 
+    ./modules/git.nix 
+    ./modules/ssh.nix 
+
+    ./files/files.nix
+
+    ./plasma/plasma.nix
+  ];
+}   

@@ -14,9 +14,10 @@
       vesktop
       thunderbird
       ungoogled-chromium
-      blender
+      blender-hip
       nextcloud-client
       gimp
+      mission-center
     ];
   };
 

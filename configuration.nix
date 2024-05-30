@@ -62,14 +62,6 @@
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  # Enable the X11 windowing system.
-  #services.xserver.enable = true;
-
-  # Enable the Plasma 6 Desktop Environment.
-  #services.xserver.displayManager.sddm.enable = true;
-  #services.xserver.displayManager.sddm.wayland.enable = true;
-  #services.xserver.desktopManager.plasma5.enable = true;
-
   programs.dconf.enable = true;
 
   systemd.tmpfiles.rules = [
@@ -132,6 +124,10 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [ 
     "acpi_osi=!acpi_osi=\"Windows 2012\""
+    #"video=DP-1:3440x1440@144"
+    #"video=HDMI-A-1:1920x1080@60"
+    #"video=HDMI-A-2:1920x1080@60"
+    "video=3440x1440@144"
   ];
 
   nixpkgs.config.allowUnfree = true;

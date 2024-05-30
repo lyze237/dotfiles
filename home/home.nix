@@ -18,6 +18,7 @@
       nextcloud-client
       gimp
       mission-center
+      kdePackages.dragon
     ];
   };
 
@@ -27,6 +28,7 @@
     ./modules/vim.nix 
     ./modules/git.nix 
     ./modules/ssh.nix 
+    ./modules/kdeconnect.nix
 
     ./files/files.nix
 

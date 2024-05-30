@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+export PATH="$PATH:/home/lyze/.dotnet/tools"
+
 # PS1='[\u@\h \W]\$ '
 source liquidprompt
 source /usr/share/liquidprompt/themes/powerline/powerline.theme

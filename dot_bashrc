@@ -8,6 +8,10 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+detatch() {
+	nohup "$@" > /dev/null 2>&1 &
+}
+
 export PATH="$PATH:/home/lyze/.dotnet/tools"
 
 # PS1='[\u@\h \W]\$ '

@@ -5,7 +5,8 @@ README.md
 
 {{- if eq .chezmoi.os "windows" }}
 .config/
-.*
+.bashrc
+.inputrc
 .local/
 {{- else }}
 AppData/
